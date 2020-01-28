@@ -19,4 +19,9 @@
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <ProjectReference Include="..\LambdaForum.Data\LambdaForum.Data.csproj" />
+  </ItemGroup>
+
 </Project>
