@@ -12,9 +12,11 @@ namespace LambdaForum.Data
         IEnumerable<Post> GetAll();
         IEnumerable<Post> GetFilteredPosts(string searchQuery);
         IEnumerable<Post> GetPostsByForum(int id);
+        IEnumerable<Post> GetLatestPosts(int numberOfPosts);
 
         Task Add(Post newPost);
         Task Delete(int id);
         Task EditPostContent(int id, string newContent);
+        
     }
 }
