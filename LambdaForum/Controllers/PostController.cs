@@ -80,19 +80,23 @@ namespace LambdaForum.Controllers
             var user = await _userManager.FindByIdAsync(userId);
             var post = BuildPost(model, user);
 
-            await _postsService.Add(post);
+             _postsService.Add(post).Wait();
+            //TODO User Rating ADD
 
-            return RedirectToAction("Index", "Post",post.Id);
+            return RedirectToAction("Index", "Post",new { id  = post.Id});
         }
 
         private Post BuildPost(NewPostModel model, ApplicationUser user)
         {
+            var forum = _forumService.GetById(model.ForumId);
+
             return new Post
             {
                 Title = model.Title,
                 Content = model.Content,
                 Created = DateTime.Now,
-                User = user
+                User = user,
+                Forum = forum
             };
         }
     }

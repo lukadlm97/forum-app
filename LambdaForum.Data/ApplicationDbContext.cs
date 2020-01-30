@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using LambdaForum.Data.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,7 +14,7 @@ namespace LambdaForum.Data
             : base(options)
         {
         }
-
+        
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<Forum> Forums { get; set; }
         public DbSet<Post> Posts { get; set; }

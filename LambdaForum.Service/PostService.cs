@@ -17,9 +17,10 @@ namespace LambdaForum.Service
         {
             _context = context;
         }
-        public Task Add(Post newPost)
+        public async Task Add(Post newPost)
         {
-            throw new NotImplementedException();
+            _context.Add(newPost);
+            await _context.SaveChangesAsync();
         }
 
         public Task Delete(int id)
