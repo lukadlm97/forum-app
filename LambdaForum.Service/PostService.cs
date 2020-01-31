@@ -38,7 +38,7 @@ namespace LambdaForum.Service
             return _context.Posts
                 .Include(p => p.Forum)
                 .Include(p => p.User)
-                .Include(p => p.Replies);
+                .Include(p => p.Replies).ThenInclude(r => r.User);
         }
 
         public Post GetById(int id)
