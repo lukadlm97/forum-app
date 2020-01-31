@@ -35,7 +35,10 @@ namespace LambdaForum.Service
 
         public IEnumerable<Post> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Posts
+                .Include(p => p.Forum)
+                .Include(p => p.User)
+                .Include(p => p.Replies);
         }
 
         public Post GetById(int id)
