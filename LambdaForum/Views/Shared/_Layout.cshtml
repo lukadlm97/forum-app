@@ -13,17 +13,18 @@
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/4.4.1/css/bootstrap.min.css"
-                    asp-fallback-href="~/lib/bootstrap/dis/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position"
-              />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true"/>
+              asp-fallback-href="~/lib/bootstrap/dis/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet"/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet" />
     <link href="https://fonts.googleapsi.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-default navbar fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand navLogo" asp-controller="Home" asp-action="Index"></a>
@@ -72,7 +73,7 @@
 
                         </form>
                     }
-                    @await Html.PartialAsync("_LoginPartial")
+
                 </div>
             </div>
         </nav>
@@ -88,9 +89,19 @@
             &copy; 2020 - LambdaForum - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

@@ -63,8 +63,25 @@ body {
  padding:50px 0 20px 0;
  background-color:#eee;
  background-image: url("/images/theme/bg-01.png");
-
+ background-size:100%;
+ background-repeat:no-repeat;
+ background-attachment:fixed;
+ background-position:center;
 }
+
+.navbar{
+    box-shadow:0 5px 4px 6px #000;
+}
+
+.navLogo {
+    background-image: url("/images/app-logo-s.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-right: 16px;
+    margin-right: 12px;
+}
+
 .footer {
   position: absolute;
   bottom: 0;
